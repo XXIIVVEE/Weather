@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url('images/background.jpeg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.form-box{
+    position: relative;
+    width: 350px;
+    height: 270px;
+    background: transparent;
+    border: 2px solid rgba(130, 153, 206,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(25px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 8px 32px -2px #82abee;
+}
+/*.description_conteiner{
+    position: relative;
+    width: 200px;
+    height: 100%;
+    left: 5%;
+    top: -10%;
+    justify-content: center;
+    align-items: center;
+    color: #82abce;
+}
+
+.icon_conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #82bbcc;
+}*/
+
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #82abce;
+}
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #82abce;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .3s;
+}
+input:focus ~ label,
+input:valid ~ label{
+top: -1.5px;
+}
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #82abce;
+}
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #82abce;
+    font-size: 1.2em;
+    top: 20px;
+}
+.forget{
+    margin: -15px 0 15px ;
+    font-size: .9em;
+    color: #82abce;
+    display: flex;
+    justify-content: space-between;  
+}
+
+.forget label input{
+    margin-right: 3px;
+    
+}
+.forget label a{
+    color: #82abce;
+    text-decoration: none;
+}
+.forget label a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #82abce;
+    box-shadow: 0px 8px 16px -2px black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+.register{
+    font-size: .9em;
+    color: #82abce;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: #82abce;
+    font-weight: 600;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+
+li{
+    list-style: none;
+}
+
+.weather_container{
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: 1fr 2fr;
+    gap: 0,5rem;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+.icon_conteiner{
+    background: #1572C8;
+    border-radius: 1.5rem;
+    position: relative;
+    max-height: 90px;
+    max-width: 150px;
+    margin-right: 15px;
+}
+
+.icon_conteiner > span{
+    position: absolute;
+    right: 0;
+    padding: 0.21rem 0.5rem;
+    font-size: 12px;
+    font-weight: 900;
+    color: white;
+    background: #144471;
+    border-radius: 1.5rem;
+}
+
+.date{
+    font-weight: 600;
+    font-size: 14px;
+    color: #144471;
+}
+
+h3{
+    font-weight: 800;
+    font-size: 15px;
+    margin-top: 4px;
+    color: #82abce;
+}
+
+.counrty{
+    font-size: 20px;
+    font-weight: 1000;
+    margin: auto;
+    color: #144f71;
+}
+
+ul{
+    margin-top: 4px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: #d1d1d1;
+}
+
+li{
+    display: table;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+li> span{
+    display: table-cell;
+}
+
+li > span:first-child{
+    position: relative;
+    overflow: hidden;
+}
+
+li > span:first-child:after {
+    content: "";
+    position: absolute;
+    bottom: 0.3rem;
+    margin-left: 0.5rem;
+    width: 100%;
+}
+
+li > span + span{
+    text-align: right;
+    font-weight: 1%;
+    vertical-align: bottom;
+    padding-left: 0.5rem;
+}
+
+/*.place{
+    max-width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}*/
+.iconweather{
+    padding-top: 10px;
+}
