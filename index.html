@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css">
   <title>WeatherApp</title>
 </head>
@@ -10,15 +13,22 @@
             <div class="form-value">
                 <form action="" onkeypress="return event.keyCode != 13;">
                     <div class="inputbox">
-                        <ion-icon name="map-outline"></ion-icon>
                         <!-- <input type='text' class='searchText' /> -->
-                        <input type="text" onclick="return false" class="search">
-                        <label for="">Введите город</label>
+                        <input type="text" onclick="return false" class="search" placeholder="Введите город">
+                        <!-- <label for="">Введите город</label> -->
+                        <div class="search-button">
+                            <button onclick="return false" class="search-button-press">
+                                <!-- <ion-icon name="search-outline" class="search-ico"></ion-icon> -->
+                                <i class="gg-search"></i>
+                            </button>
+                        </div>
                     </div>
                     <div class="weather_container">
                         	<div class="icon_conteiner">
-                        		<span class="icon_conteiner-temp"></span>
-                                <div class="iconweather"></div>
+                        		<span class="icon_conteiner-temp">0&deg;C</span>
+                                <div class="iconweather">
+                                    <img src="https://openweathermap.org/img/wn/01d@2x.png" width="80" height="85">
+                                </div>
                         		<!-- <img src="images/cloudrainsun.png" width="80" height="85"> -->
                         	</div>
                         	<div class="description_conteiner">
@@ -27,15 +37,15 @@
                         		<ul>
                         			<li>
                         				<span>Влажность</span>
-                        				<span class="vlag"></span>
+                        				<span class="vlag">0%</span>
                         			</li>
                         			<li>
                         				<span>Скорость ветра</span>
-                        				<span class="wind-speed"></span>
+                        				<span class="wind-speed">0 км\ч</span>
                         			</li>
                         			<li>
                         				<span>Ощущается как</span>
-                        				<span class="arf-temp"></span>
+                        				<span class="arf-temp">0&deg;C</span>
                         			</li>
                         		</ul>
                         	</div>

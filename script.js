@@ -2,6 +2,7 @@ const ApiKey = "03ba2368d7ee8c9f33ede6e957d0ded7"
 
 const ApiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&lang=ru&q=`;
 const searchInput = document.querySelector(".search");
+const searchButton = document.querySelector(".search-button button");
 
 
 
@@ -41,15 +42,15 @@ async function checkWeather(city) {
       document.querySelector('.wind-speed').textContent = data.wind.speed + 'км/ч';
       document.querySelector('.counrty').textContent = data.name;
   
-      if (data.weather[0].main == "Clear") {
-        weatherIcon.className = "fa-solid fa-sun";
-      } else if (data.weather[0].main == "Rain") {
-        weatherIcon.className = "fa-solid fa-cloud-rain";
-      } else if (data.weather[0].main == "Mist") {
-        weatherIcon.className = "fa-solid fa-cloud-mist";
-      } else if (data.weather[0].main == "Drizzle") {
-        weatherIcon.className = "fa-solid fa-cloud-drizzle";
-      }
+      // if (data.weather[0].main == "Clear") {
+      //   weatherIcon.className = "fa-solid fa-sun";
+      // } else if (data.weather[0].main == "Rain") {
+      //   weatherIcon.className = "fa-solid fa-cloud-rain";
+      // } else if (data.weather[0].main == "Mist") {
+      //   weatherIcon.className = "fa-solid fa-cloud-mist";
+      // } else if (data.weather[0].main == "Drizzle") {
+      //   weatherIcon.className = "fa-solid fa-cloud-drizzle";
+      // }
   
       weather.style.display = "block";
       errorText.style.display = "none";
@@ -62,3 +63,7 @@ async function checkWeather(city) {
       searchInput.value = "";
     }
   });
+  searchButton.addEventListener("click", (event) => {
+    checkWeather(searchInput.value);
+    searchInput.value = "";
+  })
