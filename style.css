@@ -202,7 +202,7 @@ h3{
 }
 .counrty{
     font-size: 20px;
-    font-weight: 1000;
+    font-weight: 900;
     margin: auto;
     color: #144f71;
 }
@@ -237,7 +237,7 @@ li > span:first-child:after {
 }
 li > span + span{
     text-align: right;
-    font-weight: 1%;
+    font-weight: 100;
     vertical-align: bottom;
     padding-left: 0.5rem;
 }
