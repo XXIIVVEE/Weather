@@ -5,25 +5,6 @@ const searchInput = document.querySelector(".search");
 const searchButton = document.querySelector(".search-button button");
 
 
-
-// fetch(ApiUrl + city + `&appid=${ApiKey}`)
-//     .then(function (resp) {return resp.json()})
-//     .then(function (data){
-//         console.log(data);
-//         document.querySelector('.icon_conteiner-temp').innerHTML = Math.round(data.main.temp) + '&deg;'+ 'C';
-//         document.querySelector('.vlag').textContent = (data.main.humidity) + '%';
-//         document.querySelector('.arf-temp').innerHTML = Math.round(data.main.feels_like) + '&deg;'+ 'C';
-//         document.querySelector('.weather-name').textContent = data.weather[0].description;
-//         // document.querySelector('.iconweather').innerHTML = '<img src="https://openweathermap.org/img/wn/10d@2x.png" width="80" height="85">';
-//         document.querySelector('.iconweather').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" width="80" height="85">`;
-//         document.querySelector('.wind-speed').textContent = data.wind.speed + 'm/s';
-//         // https://openweathermap.org/img/wn/10d@2x.png
-    
-//     })  
-//     .catch(function (){
-//         // catch any errors
-//     })
-
 async function checkWeather(city) {
     const response = await fetch(ApiUrl + city + `&appid=${ApiKey}`);
   
@@ -35,11 +16,14 @@ async function checkWeather(city) {
       console.log(data);
   
       document.querySelector('.icon_conteiner-temp').innerHTML = Math.round(data.main.temp) + '&deg;'+ 'C';
-      document.querySelector('.vlag').textContent = (data.main.humidity) + '%';
-      document.querySelector('.arf-temp').innerHTML = Math.round(data.main.feels_like) + '&deg;'+ 'C';
+        document.querySelector('.vlag').textContent = (data.main.humidity) + '%';
+        document.querySelector('.vlag-label').textContent = 'Влажность';
+        document.querySelector('.arf-temp').innerHTML = Math.round(data.main.feels_like) + '&deg;' + 'C';
+        document.querySelector('.arf-temp-label').innerHTML = 'Ощущается как';
       document.querySelector('.weather-name').textContent = data.weather[0].description;
-      document.querySelector('.iconweather').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" width="80" height="85">`;
-      document.querySelector('.wind-speed').textContent = data.wind.speed + 'км/ч';
+      document.querySelector('.iconweather').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" width="80" height="85">`
+        document.querySelector('.wind-speed').textContent = data.wind.speed + 'км/ч';
+        document.querySelector('.wind-speed-label').textContent = 'Скорость ветра';
       document.querySelector('.counrty').textContent = data.name;
   
       // if (data.weather[0].main == "Clear") {

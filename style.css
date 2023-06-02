@@ -16,18 +16,18 @@ section{
 }
 .form-box{
     position: relative;
-    width: 330px;
+    width: 340px;
     height: auto;
     background: transparent;
     border: 2px solid hsla(325, 64%, 71%,0.5);
-    border-radius: 20px;
-    backdrop-filter: blur(25px);
+    border-radius: 45px;
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 8px 32px -2px hsl(325, 64%, 71%);
 }
-/*.description_conteiner{
+.description_conteiner{
     position: relative;
     width: 200px;
     height: 100%;
@@ -37,15 +37,19 @@ section{
     align-items: center;
     color: #82abce;
 }
-
-.icon_conteiner{
+.icon_conteiner-temp {
+    position: absolute;
+    top: 0px;
+}
+/* .icon_conteiner{
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #82bbcc;
-}*/
-
-.inputbox{
+    top: -50px;
+} */
+.inputbox {
     position: relative;
     top: -11px;
     margin: 30px 0;
@@ -78,7 +82,7 @@ top: -1.5px;
     outline: none;
     font-size: 1em;
     padding:0 35px 0 5px;
-    color: #82abce;
+    color: hsl(325, 64%, 71%);
 }
 .inputbox ion-icon{
     position: absolute;
@@ -128,10 +132,10 @@ button:hover {
     padding: 0;
     width: 50px;
     height: 50px;
-    transition: 0.4s;
+    transition: 2s;
     border-radius: 40px;
     /* background: #82abce; */
-    background: #0099ff56;
+    background: #8f00ff2b;
     /* box-shadow: 0px 2px 8px 2px black; */
     box-shadow: 0px 2px 8px -2px black;
     border: none;
@@ -171,24 +175,30 @@ li{
     padding-left: 10px;
     padding-bottom: 5px;
 }
-.icon_conteiner{
-    background: #1572C8;
-    border-radius: 1.5rem;
+.icon_conteiner {
+    background: #8528b70f;
+    /*background: transparent;*/
+    backdrop-filter: blur(50px);
+    border-bottom-left-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    border-top-right-radius: 1rem;
     position: relative;
     max-height: 90px;
     max-width: 150px;
     margin-right: 15px;
+    top: -13px;
 }
-.icon_conteiner > span{
-    position: absolute;
-    right: 0;
-    padding: 0.21rem 0.5rem;
-    font-size: 12px;
-    font-weight: 900;
-    color: white;
-    background: #144471;
-    border-radius: 1.5rem;
-}
+    .icon_conteiner > span {
+        position: absolute;
+        right: 0;
+        padding: 0.21rem 0.5rem;
+        font-size: 12px;
+        font-weight: 900;
+        color: white;
+        background: #8528b72f;
+        border-radius: 1.5rem;
+    }
 .date{
     font-weight: 600;
     font-size: 14px;
@@ -247,7 +257,7 @@ li > span + span{
     display: flex;
     justify-content: center;
 }*/
-.iconweather{
+    .iconweather{
     padding-top: 3px;
     padding-left: 2px;
     display: flex;
