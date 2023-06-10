@@ -1,5 +1,7 @@
-const ApiKey = "03ba2368d7ee8c9f33ede6e957d0ded7"
+import { getAll } from '@vercel/edge-config';
+const { greeting } = await getAll(['Country']);    
 
+const ApiKey = "03ba2368d7ee8c9f33ede6e957d0ded7"
 const ApiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&lang=ru&q=`;
 const searchInput = document.querySelector(".search");
 const searchButton = document.querySelector(".search-button button");
