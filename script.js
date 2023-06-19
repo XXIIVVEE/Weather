@@ -24,7 +24,7 @@ async function checkWeather(city) {
         document.querySelector('.arf-temp-label').innerHTML = 'Ощущается как';
       document.querySelector('.weather-name').textContent = data.weather[0].description;
       document.querySelector('.iconweather').innerHTML = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png" width="80" height="85">`
-        document.querySelector('.wind-speed').textContent = data.wind.speed + 'км/ч';
+        document.querySelector('.wind-speed').textContent = data.wind.speed + 'м/с';
         document.querySelector('.wind-speed-label').textContent = 'Скорость ветра';
       document.querySelector('.counrty').textContent = data.name;
   
